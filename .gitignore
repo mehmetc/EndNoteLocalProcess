@@ -1,0 +1,6 @@
+*.jar
+*.zip
+nbproject/private
+build
+dist
+.DS_Store
