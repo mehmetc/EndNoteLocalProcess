@@ -6,7 +6,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.exlibris.primo.interfaces.PushToInterface;
 import com.exlibris.primo.srvinterface.RecordDocDTO;
-import com.exlibris.primo.srvinterface.PnxConstants;
 import com.exlibris.primo.utils.formats.Ris;
 import com.exlibris.primo.xsd.commonData.PrimoResult;
 import java.text.SimpleDateFormat;
@@ -110,6 +109,8 @@ public class EndNoteLocalProcess implements PushToInterface {
             out.println("</body>");
             out.println("</html>");
 
+            out.flush();
+            out.close();
         } else {
             PrintWriter out = null;
             String encode = request.getParameter("encode");
