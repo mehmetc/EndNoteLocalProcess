@@ -70,14 +70,12 @@ public class EndNoteLocalProcess implements PushToInterface {
 
         if (request.getParameter("encode") == null) {
 
-            response.setContentType("text/html");
+            response.setContentType("mime: text/html");
+           // response.addHeader("Content-Type", "text/html");
+            
             PrintWriter out = response.getWriter();
+            out.println("<!DOCTYPE html>");
             out.println("<html>");
-            out.println("<script language=\"JavaScript\">");
-            out.println("<!--");
-            out.println("{window.resizeTo(330,250)}");
-            out.println("-->");
-            out.println("</script>");
             out.println("<head>");
             out.println("<style>");
             out.println("body {background-color: #ffffff; color: #32322f;margin: 0px; padding: 0px; font-family: 'Arial Unicode MS',Arial,verdana,serif;font-size: 100%;}");

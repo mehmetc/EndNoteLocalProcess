@@ -15,9 +15,9 @@ import java.util.logging.Logger;
  *
  * @author mehmetc
  */
-public class Ris {
+public class RisOld {
 
-    private Ris() {
+    private RisOld() {
     }
 
     public static synchronized String fromRecordDocDTO(RecordDocDTO record) {
@@ -175,7 +175,7 @@ public class Ris {
             return stringWriter.toString();
 
         } catch (Exception ex) {
-            Logger.getLogger(Ris.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(RisOld.class.getName()).log(Level.SEVERE, null, ex);
         }
         return "";
     }
